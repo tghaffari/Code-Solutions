@@ -1,14 +1,16 @@
 // Javascript program to find length of a jump
 // to reach end avoiding all obstacles
 
-function avoidObstacles(obs) {
+function solution(inputArray) {
+
   // Insert all array elements in a hash table
   // and find the maximum value in the array
   const hs = new Set();
-  let max = obs[0];
-  for (let i = 0; i < obs.length; i++) {
-    hs.add(obs[i]);
-    max = Math.max(max, obs[i]);
+  let max = inputArray[0];
+  for (let i = 0; i < inputArray.length; i++) {
+    inputArray = [5, 3, 6, 7, 9];
+    hs.add(inputArray[i]);
+    max = Math.max(max, inputArray[i]);
   }
 
   // checking for every possible length which
@@ -27,6 +29,9 @@ function avoidObstacles(obs) {
 
   return max + 1;
 }
+
+var inputArray = [5, 3, 6, 7, 9];
+solution(inputArray);
 
 // Sort the inpur array in asending order
 
